@@ -25,17 +25,17 @@ PAD = 20
 TITLEBAR_H = 30
 X0 = PAD + 24
 LINE_H = 40
-ICON, ICON_GAP, PER_ROW = 120, 22, 4
+ICON, ICON_GAP, PER_ROW = 140, 26, 4
 
 ABOUT = [
     ("🚀", ["Web Developer & Software Engineer crafting", "clean, scalable, and modern digital solutions"]),
-    ("💻", ["Building full-stack web and mobile apps with", "Next.js, Laravel, Flutter & TypeScript"]),
+    ("💻", ["Building full-stack web and mobile apps with", "Tailwind CSS, Next.js, React, Flutter & Laravel"]),
     ("🎓", ["Informatics Management Student at", "Politeknik Negeri Jember"]),
     ("📍", ["Jember, East Java, Indonesia"]),
 ]
 STACKS = [
-    ("ls ./frontend-mobile", ["ts", "js", "react", "nextjs", "tailwind", "flutter", "dart", "threejs"]),
-    ("ls ./backend-tools", ["php", "laravel", "python", "nodejs", "mysql", "postgres", "supabase", "docker"]),
+    ("ls ./frontend", ["tailwind", "nextjs", "react", "flutter"]),
+    ("ls ./backend", ["laravel", "php", "python", "mysql"]),
 ]
 
 # timing (seconds)
@@ -45,6 +45,8 @@ POP = 0.4
 
 
 def icon_uri(name):
+    if name == "sql":
+        name = "mysql"
     svg = requests.get(f"https://skillicons.dev/icons?i={name}&theme=dark", timeout=30).content
     return "data:image/svg+xml;base64," + base64.b64encode(svg).decode()
 
@@ -77,7 +79,7 @@ parts.append(f'<text x="{W/2}" y="{TITLEBAR_H/2 + 4}" fill="{MUTED}" font-size="
              f'text-anchor="middle">dimsrzqy@github: ~$ cat about.md</text>')
 
 t = 0.0
-y = TITLEBAR_H + 70
+y = TITLEBAR_H + 85
 
 
 def line(text, x, y, size, fill, weight="normal"):
@@ -88,18 +90,18 @@ def line(text, x, y, size, fill, weight="normal"):
 
 
 line(f'<tspan fill="{GREEN}">$</tspan> whoami', X0, y, 28, INK, "bold")
-y += 56
+y += 65
 for emoji, rows in ABOUT:
     for k, row in enumerate(rows):
         lead = f'{emoji} ' if k == 0 else '   '
         line(esc(lead + row), X0, y, 24, INK)
-        y += LINE_H
-    y += 8
+        y += 44
+    y += 18
 
 for cmd, icons in STACKS:
-    y += 40
+    y += 65
     line(f'<tspan fill="{GREEN}">$</tspan> {cmd}', X0, y, 28, INK, "bold")
-    y += 24
+    y += 35
     for i, name in enumerate(icons):
         col, row = i % PER_ROW, i // PER_ROW
         ix = X0 + col * (ICON + ICON_GAP)
@@ -111,7 +113,7 @@ for cmd, icons in STACKS:
     y += rows_n * ICON + (rows_n - 1) * ICON_GAP
 
 # blinking prompt at the bottom
-y += 70
+y += 95
 parts.append(f'<text class="t" style="animation-delay:{t:.2f}s" x="{X0}" y="{y}" fill="{INK}" font-size="28" '
              f'font-weight="bold"><tspan fill="{GREEN}">$</tspan> <tspan class="c">▋</tspan></text>')
 
