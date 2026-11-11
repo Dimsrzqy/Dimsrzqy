@@ -5,7 +5,7 @@
 <br>
 <br>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=24&duration=3000&pause=800&color=3FB950&center=true&vCenter=true&width=650&lines=Hi%2C+I'm+Dimas+Rizqy+Ilhami+%F0%9F%91%8B;Web+Developer+%26+Software+Engineer;Tailwind+CSS+%C2%B7+Next.js+%C2%B7+React+%C2%B7+Flutter;Laravel+%C2%B7+PHP+%C2%B7+Python+%C2%B7+SQL" alt="Typing intro" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=26&duration=3000&pause=1000&color=3FB950&center=true&vCenter=true&width=600&lines=Hi%2C+I'm+Dimas+Rizqy+Ilhami+%F0%9F%91%8B;Web+Developer+%26+Software+Engineer" alt="Typing intro" />
 
 <br>
 
