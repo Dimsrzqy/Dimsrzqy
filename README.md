@@ -1,10 +1,5 @@
 <div align="center">
 
-<img src="./assets/profile-banner.svg" width="860" alt="DIMAS RIZQY ILHAMI" />
-
-<br>
-<br>
-
 <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=26&duration=3000&pause=1000&color=3FB950&center=true&vCenter=true&width=600&lines=Hi%2C+I'm+Dimas+Rizqy+Ilhami+%F0%9F%91%8B;Web+Developer+%26+Software+Engineer" alt="Typing intro" />
 
 <br>
